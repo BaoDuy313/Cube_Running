@@ -32,13 +32,24 @@ public class GameManager : MonoBehaviour
         if(countDownStart >= 0)
         {
             CountDown();
-            countDownUI.SetActive(true);
+            if (FindObjectOfType<PauseMenu>().gameIsPause)
+            {
+                countDownUI.SetActive(false);
+            }
+            else
+            {
+
+                countDownUI.SetActive(true);
+            }
             FindObjectOfType<PlayerCollision>().movement.enabled = false;
         }
         else
         {
-            countDownUI.SetActive(false);
-            FindObjectOfType<PlayerCollision>().movement.enabled = true;
+            if(!gameHasEnded)
+            {
+                countDownUI.SetActive(false);
+                FindObjectOfType<PlayerCollision>().movement.enabled = true;
+            }
         }
     }
    

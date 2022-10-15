@@ -12,7 +12,7 @@ public class PlayerCollision : MonoBehaviour
     void Awake()
     {
         audioSource = GetComponent<AudioSource>();
-        movement.GetComponent<PlayerMovement>();
+        //movement.GetComponent<PlayerMovement>();
     }
     void Start()
     {

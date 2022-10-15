@@ -51,7 +51,7 @@ public class LevelController : MonoBehaviour
     public void LoadLv3()
     {
         
-        //StartCoroutine(LoadLevel("03"));
+        StartCoroutine(LoadLevel("03"));
         Debug.Log("Load LV 03");
     }
     //public void LoadContinue()

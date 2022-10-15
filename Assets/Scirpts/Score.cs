@@ -15,6 +15,7 @@ public class Score : MonoBehaviour
     public float scoreAmount;
 
     public float pointByCoin = 10;
+    public float pointByGem = 50;
 
     void Start()
     {
@@ -38,5 +39,9 @@ public class Score : MonoBehaviour
     public void GetCoin()
     {
         scoreAmount += pointByCoin;
+    }
+    public void GetGem()
+    {
+        scoreAmount += pointByGem;
     }
 }
